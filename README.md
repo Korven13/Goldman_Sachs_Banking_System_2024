@@ -1,0 +1,1 @@
+![Class diagram](https://github.com/Korven13/Goldman_Sachs_Banking_System_2024/blob/6e77614143f8c90fa0b34df5a5086ff07bce368b/Class%20Diagram.png?raw=true)
