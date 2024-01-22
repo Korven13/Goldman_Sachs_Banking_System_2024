@@ -1,2 +1,4 @@
-Herman,losen
-Eddvin,test
+1,Herman,losen01,1,male,18
+1,Eddvin,losen02,2,male,19
+2,HermanAccount,1,10000
+2,EddvinAccount,2,1000
