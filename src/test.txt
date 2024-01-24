@@ -1,4 +1,4 @@
-1,Herman,losen01,1,male,18
-1,Eddvin,losen02,2,male,19
-2,HermanAccount,1,10000
-2,EddvinAccount,2,1000
+1,Herman,losen01,0,male,18
+1,Eddvin,losen02,1,male,19
+2,HermanAccount,0,0,10000
+2,EddvinAccount,1,1,1000
