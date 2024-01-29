@@ -14,5 +14,7 @@ public class Account {
     public String getName() {
         return this.accName;
     }
-
+    public int getOwnerId() {
+        return this.ownerId;
+    }
 }

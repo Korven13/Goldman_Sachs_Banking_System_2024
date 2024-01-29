@@ -2,3 +2,6 @@
 1,Eddvin,losen02,1,male,19
 2,HermanAccount,0,0,10000
 2,EddvinAccount,1,1,1000
+1,Torkel,losen03,2,2,18
+2,TorkelAccount,2,2,2000
+2,HermanAccount2,3,0,500
