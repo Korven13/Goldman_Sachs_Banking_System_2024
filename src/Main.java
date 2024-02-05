@@ -1,17 +1,24 @@
 import java.io.*;
 import java.io.FileNotFoundException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) throws Exception {
+    Scanner scan = new Scanner(System.in);
+    static Scanner in;
 
-        //Account HermanAcc= new Account("HermanAcc", 1, 1000);
-        //User Herman= new User("Herman", "password", 1, "male", 18, HermanAcc);
-        User[] Users = new User[10];
-        Account[] Accounts = new Account[10];
-        Scanner in = new Scanner(new File("src/test.txt"));
-        Scanner in2 = new Scanner(new File("src/test.txt"));
-        Scanner in3 = new Scanner(new File("src/test.txt"));
+    static {
+        try {
+            in = new Scanner(new File("src/test.txt"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static User[] Users = new User[10];
+    static Account[] Accounts = new Account[10];
+
+    static void createAccounts() {
         while (in.hasNextLine()) {
             String s = in.nextLine();
             String[] sArray = s.split(",");
@@ -31,6 +38,52 @@ public class Main {
                 System.out.println("Test: " + Accounts[(Integer.valueOf(sArray[2]))].getName());
             }
         }
+    }
+
+    static void Loggin(Scanner scan) {
+        while (in2.hasNextLine()) {
+            String s = in2.nextLine();
+            String[] sArray = s.split(",");
+
+            System.out.println(sArray[0]);
+            System.out.println(sArray[1]);
+            System.out.println(sArray[3]);
+
+            if (userNameInput.equals(sArray[1]) && passwordInput.equals(sArray[2])) {
+                System.out.println("Login gick");
+                System.out.println("Vad vill du göra: 1 - Info, 2 - Sätt in pengar, 3 - Ta ut pengar, 4 - Överför pengar");
+                ArrayList<Account> list = new ArrayList<Account>();
+                while (in3.hasNextLine()) {
+                    String z = in3.nextLine();
+                    String[] zArray = s.split(",");
+                    for (int i = 0; i < 4; i++) {
+                        if ((Accounts[i].getOwnerId()) == (Integer.valueOf(sArray[3]))) {
+                            list.add(Accounts[i]);
+                        }
+                    }
+                }
+                System.out.println(list.size());
+                for (int i = 0; i < list.size(); i++) {
+                    Account curr = list.get(i);
+                    System.out.println(curr);
+                    System.out.println("1");
+                }
+            } else {
+                System.out.println("Login misslyckades");
+            }
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        //Account HermanAcc= new Account("HermanAcc", 1, 1000);
+        //User Herman= new User("Herman", "password", 1, "male", 18, HermanAcc);
+
+        Scanner in = new Scanner(new File("src/test.txt"));
+        Scanner in2 = new Scanner(new File("src/test.txt"));
+        Scanner in3 = new Scanner(new File("src/test.txt"));
+
+        createAccounts();
 
 
         Scanner scan = new Scanner(System.in);
@@ -68,6 +121,7 @@ public class Main {
                     System.out.println(curr);
                     System.out.println("1");
                 }
+
 
 
 
